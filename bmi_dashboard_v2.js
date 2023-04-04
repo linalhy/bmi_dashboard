@@ -53,9 +53,9 @@ import panel as pn
 pn.extension('tabulator')
 import hvplot.pandas
 
-dataset_mean = pd.read_csv("Data/dataset_mean.csv")
-dataset_under = pd.read_csv("Data/dataset_under.csv")
-dataset_over = pd.read_csv("Data/dataset_over.csv")
+dataset_mean = pd.read_csv("https://raw.githubusercontent.com/linalhy/linalhy.github.io/main/Data/dataset_mean.csv")
+dataset_under = pd.read_csv("https://raw.githubusercontent.com/linalhy/linalhy.github.io/main/Data/dataset_under.csv")
+dataset_over = pd.read_csv("https://raw.githubusercontent.com/linalhy/linalhy.github.io/main/Data/dataset_over.csv")
 
 # Make dataframe pipeline interactive
 idf_mean = dataset_mean.interactive()
