@@ -157,7 +157,7 @@ template = pn.template.FastListTemplate(
               pn.pane.Markdown("#### Worldwide obesity has approximately tripled since 1975."),
               pn.pane.Markdown("#### In 2016, more than 1.9 bilion adults (>17 years and older), were overweight. Of these, >650 milion were obese."),
               pn.pane.Markdown("#### Most of the world's population live in countries where overweight and obesity kills more people than underweight."),
-              pn.pane.JPG('https://raw.githubusercontent.com/linalhy/linalhy.github.io/main/Data/junkfood.jpg', sizing_mode = 'scale_both'),
+              #pn.pane.JPG('https://c.ndtvimg.com/2020-06/dra42d7g_junk-food-_625x300_30_June_20.jpg', sizing_mode = 'scale_both'),
               pn.pane.Markdown("##Settings"),
               #year_slider,
               sex_menu, 
