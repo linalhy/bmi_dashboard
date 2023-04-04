@@ -63,7 +63,7 @@ idf_over = dataset_over.interactive()
 idf_under = dataset_under.interactive()
 
 # Defining panel widgets: the sex dropdown menu
-#year_slider = pn.widgets.IntSlider(name = 'Year slider', start = 1975, end = 2016, value = 1975)
+year_slider = pn.widgets.IntSlider(name = 'Year slider', start = 1975, end = 2016, value = 1975)
 sex_menu = pn.widgets.Select(options = ['BothSexes', 'Female', 'Male'], name = 'Sex')
 
 # Defining Panel widgets: radio buttons for mean BMI in the pooled population
@@ -78,7 +78,7 @@ income_group = ['HighIncome', 'LowerIncome', 'LowerMiddleIncome', 'UpperMiddleIn
 # Connecting the widgets to the dataset_mean pipeline
 bmi_all_pipeline = (
     idf_mean[
-        #(idf_mean.TimeDim <= year_slider) &
+        (idf_mean.TimeDim <= year_slider) &
         (idf_mean.Sex == sex_menu) & 
         (idf_mean.WorldBankIncomeGroup.isin(income_group))
     ]
@@ -101,7 +101,7 @@ bmi_all_plot = bmi_all_pipeline.hvplot(x = 'TimeDim',
 # Connecting the widgets to the dataset_over (overweight adults) pipeline
 bmi_over_adult_pipeline = (
     idf_over[
-        #(idf_over.TimeDim <= year_slider) & 
+        (idf_over.TimeDim <= year_slider) & 
         (idf_over.Sex == sex_menu) & 
         (idf_over.WorldBankIncomeGroup.isin(income_group))
     ]
@@ -125,7 +125,7 @@ bmi_over_adult_plot = bmi_over_adult_pipeline.hvplot(x = 'TimeDim',
 # Connecting the widgets to the under_adult (underweight adults) pipeline
 bmi_under_adult_pipeline = (
     idf_under[
-        #(idf_under.TimeDim <= year_slider) & 
+        (idf_under.TimeDim <= year_slider) & 
         (idf_under.Sex == sex_menu) & 
         (idf_under.WorldBankIncomeGroup.isin(income_group))
     ]
