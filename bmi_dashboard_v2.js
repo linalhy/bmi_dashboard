@@ -159,7 +159,7 @@ template = pn.template.FastListTemplate(
               pn.pane.Markdown("#### Most of the world's population live in countries where overweight and obesity kills more people than underweight."),
               #pn.pane.JPG('https://c.ndtvimg.com/2020-06/dra42d7g_junk-food-_625x300_30_June_20.jpg', sizing_mode = 'scale_both'),
               pn.pane.Markdown("##Settings"),
-              #year_slider,
+              year_slider,
               sex_menu, 
               pn.pane.Markdown(" Data source: World Health Organisation (2023)")],
              
